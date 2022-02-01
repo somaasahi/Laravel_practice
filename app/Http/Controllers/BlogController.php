@@ -69,7 +69,6 @@ class BlogController extends Controller
     public function showEdit($id)
     {
       $blog = Blog::find($id);
-
       if(is_null($blog)){
         \Session::flash('err_msg', 'データがありません。');
         return redirect(route('blogs'));
